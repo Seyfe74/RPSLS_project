@@ -8,15 +8,15 @@
 
 #defines Player class
 class Player:
-    def__init__(self, name, gesture)
+    def __init__ (self, name):
         self.name = name
-        self.gesture = []
+        self.gesture = ["Rock", "Paper", "Scissors","Lizard", "Spock"]
 
-#array of gesture options
+
     
 #random choice by computer
-    def.comp_choice(self):
-    pass
+    def comp_choice(self):
+        pass
 
 
 
