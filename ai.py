@@ -8,7 +8,6 @@ class Ai(Player):
         return(random.choice(self.gesture))
 
 
-
         
        
            
