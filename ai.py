@@ -1,7 +1,4 @@
-
-from random import seed
 from player import Player
-#from random import randint
 import random
 class Ai(Player):
     def __init__ (self,name):
@@ -9,8 +6,9 @@ class Ai(Player):
 # prepare a sequence
     def comp_choice(self):
         return(random.choice(self.gesture))
+print(Ai("Computer").comp_choice())
         
-# make choices from the sequence
+
 
         
        
