@@ -1,4 +1,6 @@
 
+from human import Human
+from ai import Ai
 class Game:
 
 
@@ -8,6 +10,9 @@ class Game:
     self.player_two = None
    # Can Do
    def run_game(self):
+      self.determine_game_type()
+      player_one_chosen_gesture = self.player_one.get_choice()
+      player_two_chosen_gesture = self.player_two.get_choice()
     #Setup Phase
     #Welcome
     #Display rules, what beats what?
@@ -34,4 +39,4 @@ class Game:
 
    def determine_game_type(self):
     # Set self.player_two to human or AI
-    pass
+      self.player_two = Ai()

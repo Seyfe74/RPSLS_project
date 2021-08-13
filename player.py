@@ -11,9 +11,8 @@ class Player:
         self.gesture = ["Rock", "Paper", "Scissors","Lizard", "Spock"]
 
 
-    
-#random choice by computer
-    def comp_choice(self):
+
+    def get_choice(self):
         pass
 
 

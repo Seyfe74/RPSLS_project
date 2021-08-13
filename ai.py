@@ -4,7 +4,7 @@ class Ai(Player):
     def __init__ (self,name):
         super().__init__(name)
 # prepare a sequence
-    def comp_choice(self):
+    def get_choice(self):
         return(random.choice(self.gesture))
 print(Ai("Computer").comp_choice())
         

@@ -20,4 +20,4 @@ class Human(Player):
              return self.get_choice()
         else: 
             return self.gesture[user_input]
-print (Human("Player_one").get_choice())
+#print (Human("Player_one").get_choice())
