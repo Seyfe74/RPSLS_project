@@ -6,7 +6,7 @@ class Ai(Player):
 # prepare a sequence
     def get_choice(self):
         return(random.choice(self.gesture))
-print(Ai("Computer").comp_choice())
+print(Ai("Computer").get_choice())
         
 
 

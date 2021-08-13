@@ -14,6 +14,10 @@ class Game:
       player_one_chosen_gesture = self.player_one.get_choice()
       player_two_chosen_gesture = self.player_two.get_choice()
     #Setup Phase
+     print("Here are the rules:")
+rules = ["1. Rock crushes Scissors", "2. Scissors cuts Paper", "3. Paper covers Rock","4. Rock crushes Lizard","5. Lizard poisons Spock","6. Spock smashes Scissors","7. Scissors decapitates Lizard", "8. Lizard eats Paper, 9. Paper disproves Spock", "10. Spock vaporizes Rock"]
+for item in rules:
+    print(item)
     #Welcome
     #Display rules, what beats what?
     #Determine Game Type-Single player or multi?
@@ -35,7 +39,7 @@ class Game:
     #End game
     #Display winner of game
     #(Not required) Ask if they want to play again
-    pass
+
 
    def determine_game_type(self):
     # Set self.player_two to human or AI
