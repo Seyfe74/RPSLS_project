@@ -20,15 +20,85 @@ class Game:
          print(item)
 
       self.determine_game_type()
+      self.compare_choices ()
+      self.end_game ()
+
+      
+
+   def compare_choices (self):
+         self.player_one_score = 0
+         self.player_two_score = 0
+         self.game_round = 1
+         # player_one_chosen_gesture = self.player_one.get_choice()
+         # print ("Player one chosen gesture is   " + player_one_chosen_gesture)
+         # player_two_chosen_gesture = self.player_two.get_choice()
+         # print ("Player two chosen gesture is   " + player_two_chosen_gesture)
+
+         
+         while (self.player_one_score < 2 and self.player_two_score < 2):
+            player_one_chosen_gesture = self.player_one.get_choice()
+            print ("Player one chosen gesture is   " + player_one_chosen_gesture)
+            player_two_chosen_gesture = self.player_two.get_choice()
+            print ("Player two chosen gesture is   " + player_two_chosen_gesture)
+
+            if player_one_chosen_gesture == player_two_chosen_gesture :
+            
+               self.player_one_score = self.player_one_score + 0
+               self.player_two_score = self.player_two_score + 0
+              
+               print (" It is Tie")
+               print (" Round:   "  + str(self.game_round) ,  "Player_One Score is:  " + str(self.player_one_score) , "Player_Two Score is:  " + str(self.player_two_score)  )
+
+            elif ((player_one_chosen_gesture == "Rock" and player_two_chosen_gesture ==  "Scissors") or(player_one_chosen_gesture == "Rock" and player_two_chosen_gesture =="Lizard" )):
+               self.player_one_score = self.player_one_score + 1
+               self.player_two_score = self.player_two_score + 0
+               
+               print (" It is a win for Player_One")
+               print (" Round:   "  + str(self.game_round) ,  "Player_One Score is:  " + str(self.player_one_score) , "Player_Two Score is:  " + str(self.player_two_score)  )
+
+            elif ((player_one_chosen_gesture == "Paper" and player_two_chosen_gesture == "Rock") or (player_one_chosen_gesture == "Paper" and player_two_chosen_gesture =="Spock")) :
+               self.player_one_score = self.player_one_score + 1
+               self.player_two_score = self.player_two_score + 0
+               
+               print (" It is a win for Player_One")
+               print (" Round:   "  + str(self.game_round) ,  "Player_One Score is:  " + str(self.player_one_score) , "Player_Two Score is:  " + str(self.player_two_score)  )
+            elif ((player_one_chosen_gesture == "Scissors" and player_two_chosen_gesture == "Paper") or (player_one_chosen_gesture == "Scissors" and player_two_chosen_gesture=="Lizard" )):
+               self.player_one_score = self.player_one_score + 1
+               self.player_two_score = self.player_two_score + 0
+              
+               print (" It is a win for Player_One")
+               print (" Round:   "  + str(self.game_round) ,  "Player_One Score is:  " + str(self.player_one_score) , "Player_Two Score is:  " + str(self.player_two_score)  )
+            elif (( player_one_chosen_gesture == "Lizard" and player_two_chosen_gesture == "Spock") or (player_one_chosen_gesture == "Lizard" and player_two_chosen_gesture == "Paper") ):
+               self.player_one_score = self.player_one_score + 1
+               self.player_two_score = self.player_two_score + 0
+               
+               print (" It is a win for Player_One")
+               print (" Round:   "  + str(self.game_round) ,  "Player_One Score is:  " + str(self.player_one_score) , "Player_Two Score is:  " + str(self.player_two_score)  )
+            elif ((player_one_chosen_gesture == "Spock" and player_two_chosen_gesture == "Scissors") or (player_one_chosen_gesture == "Spock" and player_two_chosen_gesture == "Rock")) :
+               self.player_one_score = self.player_one_score + 1
+               self.player_two_score = self.player_two_score + 0
+               
+               print (" It is a win for Player_One")
+               print (" Round:   "  + str(self.game_round) ,  "Player_One Score is:  " + str(self.player_one_score) , "Player_Two Score is:  " + str(self.player_two_score)  )
+            else:
+               self.player_one_score = self.player_one_score + 0
+               self.player_two_score = self.player_two_score + 1
+               print (" It is a win for Player_Two")
+               print (" Round:   "  + str(self.game_round) ,  "Player_One Score is:  " + str(self.player_one_score) , "Player_Two Score is:  " + str(self.player_two_score)  )
+               
+               
+            self.game_round = self.game_round + 1
+               
+   def end_game (self):
+      self.winner = ""
+      if  self.player_one_score == 2:
+         self.winner = "Player One"
+      else: 
+         self.winner = "Player Two"      
+
+      print("The winner of this game is:  " + self.winner)
 
 
-      player_one_chosen_gesture = self.player_one.get_choice()
-      print ("Player one chosen gesture is   " + player_one_chosen_gesture)
-      player_two_chosen_gesture = self.player_two.get_choice()
-      print ("Player two chosen gesture is   " + player_two_chosen_gesture)
-
-
-    
     #Welcome
     #Display rules, what beats what?
     #Determine Game Type-Single player or multi?
